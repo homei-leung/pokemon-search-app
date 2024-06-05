@@ -7,7 +7,7 @@ const pokeName = document.getElementById("pokemon-name");
 const id = document.getElementById("pokemon-id");
 const weight = document.getElementById("weight");
 const height = document.getElementById("height");
-const sprite = document.getElementById("sprite");
+const spriteDiv = document.getElementById("sprite-div");
 const types = document.getElementById("types");
 const hp = document.getElementById("hp");
 const attack = document.getElementById("attack");
@@ -29,7 +29,7 @@ const searchDex = async () => {
         weight.textContent = `Weight: ${data.weight}`;
         height.textContent = `Height: ${data.height}`;
         sprite.innerHTML =`
-        <img id="sprite-image" src="${data.sprites.front_default}" alt="${data.name} front default sprite">`;
+        <img id="sprite" src="${data.sprites.front_default}" alt="${data.name} front default sprite">`;
         
         types.innerHTML = data.types
             .map(obj => `<span class="${obj.type.name} type">${obj.type.name.toUpperCase()}</span>`)
