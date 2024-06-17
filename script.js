@@ -28,7 +28,7 @@ const searchDex = async () => {
         id.textContent = `#${data.id}`;
         weight.textContent = `Weight: ${data.weight}`;
         height.textContent = `Height: ${data.height}`;
-        sprite.innerHTML =`
+        spriteDiv.innerHTML =`
         <img id="sprite" src="${data.sprites.front_default}" alt="${data.name} front default sprite">`;
         
         types.innerHTML = data.types
