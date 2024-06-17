@@ -21,7 +21,7 @@ const searchDex = async () => {
     try {
         //Match search input to pokedex
         const query = searchInput.value.toLowerCase();
-        const response = await fetch(`https://pokeapi-proxy.freecodecamp.rocks/api/pokemon/${query}`);
+        const response = await fetch(`http://pokeapi-proxy.freecodecamp.rocks/api/pokemon/${query}`);
         const data = await response.json();
         //Populate result div with pokemon-specific data
         pokeName.textContent = `${data.name.toUpperCase()}`;
